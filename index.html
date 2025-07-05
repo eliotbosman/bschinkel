@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <h1>Bodil Schrinkel</h1>
+        <h1>Bodil Schinkel</h1>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
     </header>
     
     <main>
@@ -26,8 +27,8 @@
                     <p>EVERYTHING IN THE WORLD BEGAN is a dance-charged video poem that explores what it means to be in relation with others in order to understand what it means to be made of flesh and to be vulnerable.</p>
                     
                     <div class="image-sequence" id="sequenceContainer">
-                        <img src="bsqeuel_1.png" alt="Sequence Image 1" class="sequence-image active" id="bsequel_1">
-                        <img src="bsqeuel_2.png" alt="Sequence Image 2" class="sequence-image" id="bsequel_2">
+                        <img src="bsequel_1.png" alt="Sequence Image 1" class="sequence-image active" id="bsequel_1">
+                        <img src="bsequel_2.png" alt="Sequence Image 2" class="sequence-image" id="bsequel_2">
                     </div>
                 </div>
             </div>
@@ -176,29 +177,27 @@
                         <p>Barista, Kitchen help</p>
                     </div>
                 </div>
+                
+
+                <div class="contact-links">
+                    <a href="mailto:bodil.schrinkel@gmail.com">Email</a>
+                    <a href="https://www.instagram.com/bodilschrinkel/" target="_blank">Instagram</a>
+                </div>
             </div>
         </section>
     </main>
 
     <script>
-        // Image sequence looping function
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('.sequence-image');
             let currentIndex = 0;
             
-            // Function to toggle between images
             function toggleImage() {
-                // Hide all images
                 images.forEach(img => img.classList.remove('active'));
-                
-                // Show current image
                 images[currentIndex].classList.add('active');
-                
-                // Update index for next time
                 currentIndex = (currentIndex + 1) % images.length;
             }
             
-            // Start the loop - change image every 1 second
             setInterval(toggleImage, 1000);
         });
     </script>
